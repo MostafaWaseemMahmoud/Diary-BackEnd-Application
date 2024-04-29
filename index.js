@@ -18,6 +18,9 @@ const port = 8080 || process.env.PORT;
 app.get("/", (request, response) => {
   response.status(200).send("Hello In Our Server");
 });
+app.get("/test", (request, response) => {
+  response.status(200).send("Hello In Our Server");
+});
 
 app.get("/allusers", (req, res) => {
   if (users.length === 0) {
