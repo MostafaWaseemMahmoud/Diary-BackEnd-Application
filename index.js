@@ -1,24 +1,11 @@
-const cors = require("cors");
-
+const express = require("express");
 const app = express();
-
-// Enable CORS
-app.use(cors());
 app.use(express.json());
 const users = [];
 
-const corsOptions = {
-  origin: "http://localhost:4200", // Allow requests only from this origin
-  optionsSuccessStatus: 200, // Some legacy browsers choke on 204
-};
-
-app.use(cors(corsOptions));
 const port = 8080 || process.env.PORT;
 
 app.get("/", (request, response) => {
-  response.status(200).send("Hello In Our Server");
-});
-app.get("/test", (request, response) => {
   response.status(200).send("Hello In Our Server");
 });
 
