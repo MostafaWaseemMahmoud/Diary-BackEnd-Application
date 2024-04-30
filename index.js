@@ -37,11 +37,6 @@ app.post("/adduser", (req, res) => {
     email: email,
   };
 
-  if (data.name.length == 0 || data.name.length > 3) {
-    res.status(400).send("Invalid name");
-    return;
-  }
-
   if (data.password.length === 0) {
     res.status(400).send("Invalid password");
     return;
