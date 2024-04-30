@@ -37,20 +37,20 @@ app.post("/adduser", (req, res) => {
     email: email,
   };
 
-  if (data.name.length == 0 || data.name.length > 3) {
-    res.status(400).send("Invalid name");
-    return;
-  }
+  // if (data.name.length == 0 || data.name.length > 3) {
+  //   res.status(400).send("Invalid name");
+  //   return;
+  // }
 
-  if (data.password.length == 0) {
-    res.status(400).send("Invalid password");
-    return;
-  }
+  // if (data.password.length == 0) {
+  //   res.status(400).send("Invalid password");
+  //   return;
+  // }
 
-  if (data.email.length == 0) {
-    res.status(400).send("Invalid email");
-    return;
-  }
+  // if (data.email.length == 0) {
+  //   res.status(400).send("Invalid email");
+  //   return;
+  // }
 
   if (checkUserAlreadyExist(email)) {
     res.status(400).send("User already exists");
