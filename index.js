@@ -100,7 +100,7 @@ app.post("/login", (req, res) => {
     res.status(401).send("Invalid email or password");
     return;
   }
-  res.status(200).send("Login successful");
+  res.status(200).send(user);
 });
 
 app.listen(port, () => {
